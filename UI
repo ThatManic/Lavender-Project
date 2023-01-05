@@ -275,14 +275,14 @@ function LibraryV2.UI(Name)
     if not _Data then
         ELib_Data = {
             Last_Visit = os.date("%x", os.time()),
-            Config_Name = game.Players.LocalPlayer.Character.Humanoid.Name,
+            Config_Name = game.Players.LocalPlayer.DisplayName,
         }
 
         SaveData()
     end
 
     TopMenu.last.Text = "Last visit: "..ELib_Data.Last_Visit
-    TopMenu.cf.Text = "Roblox Username: "..ELib_Data.Config_Name
+    TopMenu.cf.Text = "Roblox Display Name: "..ELib_Data.Config_Name
     TopMenu.holder.TextLabel.Text = "Welcome, "..game.Players.LocalPlayer.Name
 
     ELib_Data.Last_Visit = os.date("%x", os.time())
